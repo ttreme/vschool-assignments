@@ -1,0 +1,36 @@
+
+.box {
+    border: 1px solid green ;
+}
+
+
+.col-xs-12 {
+    height: 100px;
+    background-color: #F5C6D6;
+    border: 5px solid white ;
+}
+.col-xs-3 {
+    height: 100px;
+    background-color: #EE2E84;
+    border: 5px solid white ;
+}
+.col-xs-6 {
+    height: 100px;
+    background-color: #85CFD8;
+    border: 5px solid white ;
+}
+
+.col-xs-9 {
+    height: 100px;
+    background-color: #8DC63F;
+    border: 5px solid white ;
+}
+
+.col-xs-offset-3 {
+    height: 100px;
+    background-color: #E76E34;
+    border: 5px solid white ;
+}
+
+
+

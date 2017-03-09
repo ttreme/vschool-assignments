@@ -1,0 +1,67 @@
+/*A "sticky" horizontal navbar (meaning it is always on the top of the page, even if you scroll down)
+A blog-style feed, where each blog post (which you'll just hard-code in for now) is in the center of the page, and as your scroll down the page it shows older blog posts.
+Each blog post should have a title of some kind
+Each blog post should have the date it was "published"
+Each blog post should have a photo of some kind near the top of the text, and the text should wrap around the photo and have a reasonable margin between the photo and the wrapped text.*/
+img {
+    width:150px;
+    height: 150px;
+    display: inline-block;
+    position: relative;
+    float:left;
+    word-wrap:normal;
+
+    
+}
+.container {
+    margin: 50px;
+    position: static;
+    text-align: center;
+}
+
+#title {
+    font-size: 50px;
+    font-family: monospace;
+}
+
+.innerBar {
+    display: inline-block;
+    margin: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    position: relative;
+}
+
+.postOne {
+    display: block;
+    margin: 500px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    position: relative;
+    font-family: fantasy;
+    font-size: 20px;
+}
+
+.postTwo {
+    display: block;
+    margin: 500px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    position: relative;
+    font-family: fantasy;
+    font-size: 20px;
+}
+.postThree {
+    display: block;
+    margin: 500px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    position: relative;
+    font-family: fantasy;
+    font-size: 20px;
+}
+#timeStamp {
+    position: static;
+    margin-left: 85%;
+    margin-top: 1px;
+}

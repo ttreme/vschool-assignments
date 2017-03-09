@@ -1,0 +1,12 @@
+h1 {
+    color: aquamarine;
+}
+
+.milk {
+    border: 10px solid;
+    border-color: bisque;
+}
+p {
+    vertical-align: text-bottom;
+    display:inline-block;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms-Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+
+<body>
+        <div class="theGodClass">
+            <div class="fullNames">
+               <form id = "formBaby">
+                <div class="col-3"> First Name:
+                    <input id = "holyMoly" type="text"  name="firstName"> </div>
+                <div class="col-3"> Last Name:
+                    <input type="text" value="" name="lastName"> </div>
+                <div class="col-3">Age:
+                    <input type="number" value="" name = "age"> </div>
+                <div class="genderStuff">
+                    <div class="Gender">Gender : <span>Male  <input type="radio" value = "Male" id="genderOption" name="gender"></span> <span>Female <input type="radio" id="genderOption" name="gender"></span> </div>
+                    <div class="destination">
+                        <div>Destinations:
+                            <select name ="country">
+                                <option>Madagascar</option>
+                                <option>Cancun</option>
+                                <option>Taco Bell</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3">Dietary Restrictions: <span class="col-3">Kosher
+                    <input type="checkbox" name="dietType" id="kosher" value = "Kosher">
+                </span> <span class="col-3">Vegetarian: 
+                    <input type="checkbox" name="dietType" id="vegetarian" value = "Vegetarian">
+                </span> <span class="col-3" id="lactoseFree" value = "Lactose Free">Lactose Free: 
+                    <input type="checkbox" name="dietType" value = "Lactose Free">
+                    </span></div>
+                    <div><button type = "button"  id = "finalSubmission"  name = "finalSubmit">Submit</button></div>
+                </div>
+                </form>
+            </div>
+        </div>
+</body>
+<script src = "main.js"></script> 
+</html>

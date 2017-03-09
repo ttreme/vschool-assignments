@@ -1,0 +1,16 @@
+.theGodClass {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    background-image: url("https://www.quickenloans.com/blog/wp-content/uploads/2012/07/Airplane-sunset.jpg");
+    background-repeat:round;
+    color: aliceblue;
+    font-family:fantasy;
+}
+
+.Gender {
+    padding: 5px;
+}
+

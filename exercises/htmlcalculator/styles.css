@@ -1,0 +1,23 @@
+#thing1 {
+    font-size: 20px;
+    background-color: aqua;
+    text-align: center;
+}
+
+#thing2 {
+    font-size: 20px;
+    background-color: greenyellow;
+    text-align: center;
+}
+
+#thing3 {
+    font-size: 20px;
+    background-color: black;
+    color: red;
+    text-align: center;
+}
+
+div {
+    padding: 50px;
+    width: 100%;
+}

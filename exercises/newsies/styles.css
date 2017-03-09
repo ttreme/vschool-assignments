@@ -1,0 +1,39 @@
+.milk {
+    display: inline-block;
+    height: 283px;
+    width: 399px;
+    border: solid 5px;
+    border-color: bisque;
+   
+
+    
+}
+
+p {
+    display: inline-block;
+    width: 30%;
+}
+.someParagraphs {
+    color: darkblue;
+    background-color: beige;
+    font-family: cursive;
+    text-align: center;
+    
+}
+
+.title {
+    font-family: fantasy;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+}
+.subtitle {
+    font-family: fantasy;
+    text-align: center;
+    text-decoration:underline;
+}
+.lastParagraph{
+    font-family: fantasy;
+    text-align: center;
+    text-decoration: underline;
+}

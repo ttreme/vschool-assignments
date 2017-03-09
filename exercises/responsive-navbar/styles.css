@@ -1,0 +1,52 @@
+.container {
+    background-image: url("img/backgroundBoat.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+/*    display:flex;*/
+}
+body {
+    
+}
+
+.social{
+    height: 30px;
+
+}
+.mobile-view{
+    display:none;
+}
+
+nav.desktop-view ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+
+.banner{
+    font-size: 60px;
+    display:flex;
+    justify-content: center;
+    padding-top: 200px;
+}
+
+@media screen and (max-width: 875px){
+    .desktop-view{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 875px){
+    nav.mobile-view{
+        display:block;
+    }
+    .social{
+        float:right;
+        padding: 25px;
+    }
+}
+.hamburger {
+        padding-top: 25px;
+        font-size: 30px;
+    }

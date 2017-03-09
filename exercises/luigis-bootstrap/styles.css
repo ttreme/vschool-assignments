@@ -1,0 +1,48 @@
+@font-face {
+    font-family:mario-Font;
+    src: url(SuperMario256.ttf);
+}
+
+
+
+
+
+.firstBox {
+    height: 100px;
+    background-color: #FFD700;
+    font-family: mario-Font;
+    font-size: 50px;
+}
+.redBox {
+    height: 300px;
+    background-color: red;
+   
+}
+
+.whiteSpace {
+    height: 200px;
+    background-color: white;
+}
+
+.col-xs-offset-3 {
+    height: 100px;
+
+
+}
+.luigiBio {
+    text-align: center;
+    color: red;
+    font-size: 25px;
+    font-family: serif;
+}
+.aboutMe{
+    text-align: center;
+    font-family: mario-Font;
+    font-size: 40px;
+    color: red;
+}
+.lastBox {
+    height: 100px;
+    background-color: #FFD700;
+    
+}

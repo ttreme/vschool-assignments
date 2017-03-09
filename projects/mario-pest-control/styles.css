@@ -1,0 +1,122 @@
+h5 {
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    font-family: myFirstFont;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-image: url("http://wallpapercave.com/wp/dYhlSep.jpg");
+    
+/*    https://p5b4y2t6.ssl.hwcdn.net/game-header/950/17566-wrzehzey.jpg*/
+}
+
+h6 {
+    color: red;
+    font-size: 22px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: red;
+    font-family: myFirstFont;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(SuperMario256.ttf);
+}
+
+p {
+    text-align: center;
+}
+
+#coinStuff1 {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#coinStuff2 {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#coinStuff3 {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#totalG {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#totalB {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#totalM {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#totalGCoins {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#totalBCoins {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+#totalMCoins {
+    font-size: 30px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: black;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+
+#totalSumAnswer {
+    text-align: center;
+    font-size: 25px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-family: myFirstFont;
+    color: red;
+}
+
+#totalSumAnswer {
+    font-size: 50px;
+}
