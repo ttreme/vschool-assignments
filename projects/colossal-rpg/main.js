@@ -6,123 +6,151 @@ var randomMath = function (min, max) {
 var monsters = [{
     firstName: "Goku"
     , secretItem: "Spirit Bomb"
-    , hitPoints: randomMath(2, 5)
-    , damageDealt: randomMath(1, 2)
+    , hitPoints: randomMath(15, 25)
+    , damageDealt: randomMath(15, 20)
 }, {
     firstName: "MagiKarp"
     , secretItem: "Splashball"
-    , hitPoints: randomMath(4, 7)
-    , damageDealt: randomMath(2, 5)
+    , hitPoints: randomMath(25, 40)
+    , damageDealt: randomMath(30, 34)
 }, {
     firstName: "Kirby"
     , secretItem: "Swallow Amulet"
-    , hitPoints: randomMath(6, 10)
-    , damageDealt: randomMath(3, 6)
+    , hitPoints: randomMath(40, 60)
+    , damageDealt: randomMath(20, 40)
 }, {
     firstName: "BoogerMan"
     , secretItem: "booger-flicker Machine"
-    , hitPoints: randomMath(10, 12)
-    , damageDealt: randomMath(4, 7)
+    , hitPoints: randomMath(50, 70)
+    , damageDealt: randomMath(1, 100)
 }];
 var specialItems = [];
+//this makes while loop at the bottom run
 var run = true;
-//intro function
 var userName = {
     firstName: ask.question("May I have your name? ")
-    , secretPower: "Harambe"
-    , hitPoints: 20 
-    , damageDealt: randomMath(3, 10)
+    , secretPower: "Harambe flung his poop at your enemies! This lead to your victory" 
+    , hitPoints: 500
+    , damageDealt: randomMath(1, 50)
 };
 
 function introFunction() {
     console.log("Welcome to the Death-zone!");
     console.log("Hey " + userName.firstName + ", ready to play a game?!?!?!");
-    if (ask.keyInYN("Yes or no?!")) {
+    var actions = ["walk", "Inventory-View", "Quit"];
+    var index = ask.keyIn("Yes or No?", {
+        limit: "yn"
+    })
+    if (index === "y") {
         console.log("The Game Begins!");
     }
-    else {
+    else if (index === "n") {
         console.log("Sucks to suck! This game won't be free next time! You also don't actually have a choice...");
     }
 }
 introFunction();
 //Random Monster selector
 function monsterSelector() {
-    var thisMonster;
-    if (randomMath(0, 3) === 0) {
+    var thisMonster = randomMath(0, 11);
+    if (thisMonster <= 2) {
         return monsters[0];
     }
-    else if (randomMath(0, 3) === 1) {
+    else if (thisMonster >= 3 && thisMonster <= 5) {
         return monsters[1];
     }
-    else if (randomMath(0, 3) === 2) {
+    else if (thisMonster >= 6 && thisMonster <= 8) {
         return monsters[2];
     }
-    else {
+    else if (thisMonster >= 9) {
         return monsters[3];
     }
 }
-
-//monsterSelector();
 //if walking there is a chance you may have to fight and fight actions
 var walkingDouche = function () {
-        if (randomMath(0, 4) < 1) {
+        if (randomMath(0, 4) <= 1) {
             console.log("you are walking....");
+            return bigDecisions();
         }
         else {
             console.log("You got into a fight!");
-            var fightActions = ["fight", "userHealth", "run", "quit"];
-            var indexTwo = ask.keyInSelect(fightActions, "What will you do?");
-            if (indexTwo === 0) {
+            var fightActions = ["fight", "run", "quit"];
+            var indexTwo = ask.keyIn("Press 'F' to fight! Press 'R' to Run or Press 'q' to quit ", {
+                limit: "frq"
+            });
+            if (indexTwo === "f") {
                 fightMonster(); //use fight function
             }
-            else if (indexTwo === 1) {
-                viewHealth(); //show user health function
-            }
-            else if (indexTwo === 2) {
+            else if (indexTwo === "r") {
                 runDude(); //use run function
             }
-            else if (indexTwo === 3) {
+            else if (indexTwo === "q") {
                 return screwThis();
             }
         }
     }
     //quitgame killswitch
 var screwThis = function () {
+    console.log("We knew it was over from the beginning.");
+    return false;
+}
+var gameOver = function () {
+        console.log("Don't get the poops on your way out, and have fun playing your next game!");
         return false;
     }
     //Combat/Run Functions
 var fightMonster = function () {
     if (monsterSelector() === monsters[0]) {
         console.log("get ready to fight " + monsters[0].firstName + "!");
-        if (monsters[0].damageDealt < userName.damageDealt) {
-            console.log("you beat Goku!");
-            specialItems.push(monsters[0].secretItem);
-            console.log("you got a new item!");
+        while (monsters[0].hitPoints >= 0) {
+            monsters[0].hitPoints = monsters[0].hitPoints - userName.damageDealt;
+            userName.hitPoints = userName.hitPoints - monsters[0].damageDealt;
         }
-    }else if (monsterSelector() === monsters[1]) {
-        if (monsters[1].damageDealt < userName.damageDealt) {
-            console.log("you beat MagiKarp!");
-            specialItems.push(monsters[1].secretItem);
-            console.log("you got a new item!");
+        console.log("you beat Goku!");
+        console.log (userName.secretPower);
+        specialItems.push(monsters[0].secretItem);
+        console.log("you got a new item!");
+        monsters[0].hitPoints = randomMath(15, 25);
+        userName.hitPoints = userName.hitPoints + 8;
+    }
+    else if (monsterSelector() === monsters[1]) {
+        while (monsters[1].hitPoints >= 0) {
+            monsters[1].hitPoints = monsters[1].hitPoints - userName.damageDealt;
+            userName.hitPoints = userName.hitPoints - monsters[1].damageDealt;
         }
-    }else if (monsterSelector() === monsters[2]){
-        if (monsters[2].damageDealt < userName.damageDealt){
-            console.log("you beat Kirby!");
-            specialItems.push(monsters[2].secretItem);
-            console.log("you got a new item!");
+        console.log("you beat MagiKarp!");
+        console.log (userName.secretPower);
+        specialItems.push(monsters[1].secretItem);
+        console.log("you got a new item!");
+        monsters[1].hitPoints = randomMath(30, 50);
+        userName.hitPoints = userName.hitPoints + 15;
+    }
+    else if (monsterSelector() === monsters[2]) {
+        while (monsters[2].hitPoints >= 0) {
+            monsters[2].hitPoints = monsters[2].hitPoints - userName.damageDealt;
+            userName.hitPoints = userName.hitPoints - monsters[2].damageDealt;
         }
-    }else if (monsterSelector() === monsters[3]){
-        if(monsters[3].damageDealt < userName.damageDealt){
-            console.log("you beat boogerman!");
-            specialItems.push(monsters[3].secretItem);
-            console.log("you got a new item!");
+        console.log("you beat Kirby!");
+        console.log (userName.secretPower);
+        specialItems.push(monsters[2].secretItem);
+        console.log("you got a new item!");
+        monsters[2].hitPoints = randomMath(60, 80);
+        userName.hitPoints = userName.hitPoints + 22;
+    }
+    else if (monsterSelector() === monsters[3]) {
+        while (monsters[3].hitPoints >= 0) {
+            monsters[3].hitPoints = monsters[3].hitPoints - userName.damageDealt;
+            userName.hitPoints = userName.hitPoints - monsters[3].damageDealt;
         }
+        console.log("you beat boogerman!");
+        console.log (userName.secretPower);
+        specialItems.push(monsters[3].secretItem);
+        console.log("you got a new item!");
+        monsters[3].hitPoints = randomMath(80, 100);
+        userName.hitPoints = userName.hitPoints + 30;
     }
 }
-
-
-var viewItems = function(){
-    console.log (specialItems);
+var viewItems = function () {
+    console.log(specialItems);
 }
 var runDude = function () {
     if (randomMath(1, 3) === 1) {
@@ -138,17 +166,35 @@ var viewHealth = function () {
     console.log(userName.hitPoints);
 }
 var bigDecisions = function () {
-    var actions = ["walk", "Inventory-View", "Quit", "quit"];
-    var index = ask.keyInSelect(actions, "whatchu want?");
-    if (index === 0) {
-        walkingDouche();
-    }else if (index === 1){
-        viewItems();
-    }
-    else if (index === 3) {
+    //if statement to end game if user health drops below 0
+    if (userName.hitPoints <= 0) {
+        console.log("The game is over and you are finished. Go home and clean up this code because the fight sequence is a mess.")
         return screwThis();
     }
+    else if (specialItems.length === 10) {
+        console.log("You have won! Congratulations!! You have collected over 10 items in your specialItems Array! Your prize is a day in the kitchen with Martha Stewart and Snoop Dog!");
+        return gameOver();
+    }
+    else {
+        var actions = ["walk", "Inventory-View", "Quit"];
+        var index = ask.keyIn('Walk "W" or View Inventory "I" or "H" for Health or Screw This "q"? ', {
+            limit: 'whiq'
+        })
+        if (index === "w") {
+            walkingDouche();
+        }
+        else if (index === "i") {
+            viewItems();
+        }
+        else if (index === "h") {
+            viewHealth();
+        }
+        else if (index === "q") {
+            return screwThis();
+        }
+    }
 }
+//loop that keeps the game running
 while (run) {
     run = bigDecisions();
     if (run == undefined) {
