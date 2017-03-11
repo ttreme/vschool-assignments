@@ -22,7 +22,7 @@ var monsters = [{
     firstName: "BoogerMan"
     , secretItem: "booger-flicker Machine"
     , hitPoints: randomMath(50, 70)
-    , damageDealt: randomMath(1, 100)
+    , damageDealt: randomMath(50, 100)
 }];
 var specialItems = [];
 //this makes while loop at the bottom run
@@ -30,7 +30,7 @@ var run = true;
 var userName = {
     firstName: ask.question("May I have your name? ")
     , secretPower: "Harambe flung his poop at your enemies! This lead to your victory" 
-    , hitPoints: 500
+    , hitPoints: 200
     , damageDealt: randomMath(1, 50)
 };
 
@@ -99,7 +99,9 @@ var gameOver = function () {
     }
     //Combat/Run Functions
 var fightMonster = function () {
-    if (monsterSelector() === monsters[0]) {
+    if (monsterSelector().firstName === monsters[0].firstName){
+        console.log (monsterSelector().firstName);
+        console.log (monsters[0].firstName);
         console.log("get ready to fight " + monsters[0].firstName + "!");
         while (monsters[0].hitPoints >= 0) {
             monsters[0].hitPoints = monsters[0].hitPoints - userName.damageDealt;
@@ -112,7 +114,7 @@ var fightMonster = function () {
         monsters[0].hitPoints = randomMath(15, 25);
         userName.hitPoints = userName.hitPoints + 8;
     }
-    else if (monsterSelector() === monsters[1]) {
+    else if (monsterSelector().firstName === monsters[1].firstName) {
         while (monsters[1].hitPoints >= 0) {
             monsters[1].hitPoints = monsters[1].hitPoints - userName.damageDealt;
             userName.hitPoints = userName.hitPoints - monsters[1].damageDealt;
@@ -124,7 +126,7 @@ var fightMonster = function () {
         monsters[1].hitPoints = randomMath(30, 50);
         userName.hitPoints = userName.hitPoints + 15;
     }
-    else if (monsterSelector() === monsters[2]) {
+    else if (monsterSelector().firstName === monsters[2].firstName) {
         while (monsters[2].hitPoints >= 0) {
             monsters[2].hitPoints = monsters[2].hitPoints - userName.damageDealt;
             userName.hitPoints = userName.hitPoints - monsters[2].damageDealt;
@@ -136,7 +138,7 @@ var fightMonster = function () {
         monsters[2].hitPoints = randomMath(60, 80);
         userName.hitPoints = userName.hitPoints + 22;
     }
-    else if (monsterSelector() === monsters[3]) {
+    else if (monsterSelector().firstName === monsters[3].firstName) {
         while (monsters[3].hitPoints >= 0) {
             monsters[3].hitPoints = monsters[3].hitPoints - userName.damageDealt;
             userName.hitPoints = userName.hitPoints - monsters[3].damageDealt;

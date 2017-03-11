@@ -24,3 +24,6 @@ function encoder(stringToEncode, howFarRemoved) {
     return newString;
 }
 console.log(encoder("abcdefgh", 1));
+
+
+
