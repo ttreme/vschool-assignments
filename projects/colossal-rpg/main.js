@@ -68,7 +68,7 @@ function monsterSelector() {
 //if walking there is a chance you may have to fight and fight actions
 var walkingDouche = function () {
         if (randomMath(0, 4) <= 1) {
-            console.log("you are walking....");
+            console.log("you are walking...");
             return bigDecisions();
         }
         else {
