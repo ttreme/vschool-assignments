@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mario Pest Control</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body>
+    <div class="container">
+        <h1 class=b igTitle>Mario's Pest Control</h1></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h5>Goombas</h5> <img height="400" width=100% src="http://vignette2.wikia.nocookie.net/nanohaclonewars/images/4/4e/Goomba.png/revision/latest?cb=20160718175937"></div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h5>Bob-ombs</h5> <img height="400" width=100% src=http://orig12.deviantart.net/2d65/f/2011/043/d/5/d56e5a70de2d218fe17a4d8178b354eb-d39do25.png> </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h5>Magikarp</h5><img height="400" width=100% src=http://pre03.deviantart.net/47de/th/pre/i/2011/226/4/c/magikarp_by_pragmaticinsanity-d46hf6e.png></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p id="totalG" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> Goombas Caught</p>
+            <p id="totalB" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b>Bob-ombs Caught</b></p>
+            <p id="totalM" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b>Magikarps Caught</b></p>
+            
+        </div>
+    </div>
+<!--    Buttons to Run the Functions-->
+    <div class="container">
+        <div class="row">
+            <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input type = "number" id = "goombaBaby" value = "" >
+            <input type = "submit" value = "Nice Deals Here!" id = 'goombaDaily'></p>
+            <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input type = "number" id = "bobOmbBaby" value = "" >
+            <input type = "submit" value = "Don't Cheat Me!" id = "bobOmbDaily"></p>
+            <p class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input type = "number" id = "magiKarpBaby" value = "" >
+            <input type = "submit" value = "How Much Is It?" id = "magiKarpDaily"></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p id="coinStuff1" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b>5 coins per Goomba</b></p>
+            <p id="coinStuff2" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b>7 coins per Bob-omb</b></p>
+            <p id="coinStuff3" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b>11 coins per Magikarp</b></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p id="totalGCoins" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b></b></p>
+            <p id="totalBCoins" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b></b></p>
+            <p id="totalMCoins" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><b></b></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p id="total" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"></p>
+            <button id="totalSumBtn" type="button" class="btn btn-primary col-xs-12 col-sm-12 col-md-12 col-lg-12">Total Sum of Baddies</button>
+            <div id="totalSumAnswer" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 "></div>
+            <div id="changeMe" class = "col-xs-12"></div>
+            <button id="changeBackground" type="button" class="btn btn-primary col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">Change Me</button>
+        </div>
+    </div>
+    <!--
+    <img height = "50" width = 33.3% src ="http://jacksbox.de/wp-content/uploads/2013/03/coin.png">
+    
+-->
+    <footer class="footer">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+            <h6>MariosPipeHole@gmail.com</h6></div>
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+            <h6>MarioBaddieRemovalCompany.com</h6></div>
+        <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+            <h6>852 Mario St. InThePipes, Sewage, 75775 </h6></div>
+    </footer>
+    
+    <audio id = "coinSound">
+        <source src="Mario-coin-sound.mp3" type ="audio/mp3">
+        
+    </audio>
+        <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
