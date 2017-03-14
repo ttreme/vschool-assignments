@@ -19,7 +19,7 @@ $("#myButton").click(function () {
     $.get("http://api.vschool.io:6543/pokemon.json", function (data) {
         var pokemonNames = data.objects[0].pokemon;
         for (var i = 0; i < pokemonNames.length; i++) {
-            $("#finalAnswer").append(pokemonNames[i].name);
+            $("#finalAnswer").text(pokemonNames[i].name);
         }
     });
 });

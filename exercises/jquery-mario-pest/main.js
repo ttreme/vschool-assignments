@@ -39,3 +39,13 @@ $("#changeBackground").click(function(){
     $("#changeBackground").toggleClass("#nightMode").text("night mode"); $("#nightMode").toggleClass("#changeBackground").text("Change Me");
     })
  
+$("#goombaDaily").click(function(){
+        $("#spinMe").css("transition-duration","0.5s");
+          $("#spinMe").css("transform","rotate(360deg)");
+          });
+
+//#spinMe:hover {
+//    transition-duration: 0.5s;
+//    transform: rotate(360deg);
+//    -webkit-transform: rotate(360deg);
+//}
