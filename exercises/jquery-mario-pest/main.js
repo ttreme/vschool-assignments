@@ -39,10 +39,12 @@ $("#changeBackground").click(function(){
     $("#changeBackground").toggleClass("#nightMode").text("night mode"); $("#nightMode").toggleClass("#changeBackground").text("Change Me");
     })
  
-$("#goombaDaily").click(function(){
+$("#goombaDaily").on("click",function(){
         $("#spinMe").css("transition-duration","0.5s");
           $("#spinMe").css("transform","rotate(360deg)");
           });
+n-=360;
+
 
 
 
