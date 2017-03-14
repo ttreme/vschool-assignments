@@ -44,6 +44,8 @@ $("#goombaDaily").click(function(){
           $("#spinMe").css("transform","rotate(360deg)");
           });
 
+
+
 //#spinMe:hover {
 //    transition-duration: 0.5s;
 //    transform: rotate(360deg);
