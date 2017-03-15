@@ -2,6 +2,7 @@
     text-align: center;
     font-size: 25px;
     color: black;
+    margin-bottom: 25px;
 }
 
 .spanBaby {
@@ -25,13 +26,27 @@ a {
 }
 .navbar{
     font-size: 20px;
-    opacity: .4;
-    background-color: white;
+    opacity: .7;
+/*    background-color: white;*/
     font-family: monospace;
 }
 .title {
     font-family: monospace;
-    padding-top: 70px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     color: black;
-
+    opacity: .6;
+    background-color: whitesmoke;
+    border-radius: 75px;
+}
+.littleBoxes{
+    font-family: monospace;
+    font-size: 18px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    opacity: .6;
+    background-color: whitesmoke;
+    border-radius: 75px;
+    margin-bottom: 25px;
 }
