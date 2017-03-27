@@ -1,0 +1,168 @@
+body {
+    font-family: monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+.sideBar {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.hoverMe:hover {
+    color: rgba(243, 195, 172, 1);
+}
+
+.littleTitle {
+    text-align: center;
+    font-size: 10px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.myDates {
+    text-align: center;
+    font-size: 10px;
+    color: grey;
+    display: block;
+    font-weight: 400;
+}
+
+.myDates::before {
+    content: " ";
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    line-height: 18px;
+    max-width: 80px;
+    width: 15%;
+}
+
+.myDates::after {
+    content: " ";
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    line-height: 18px;
+    max-width: 80px;
+    width: 15%;
+}
+
+.unrelated {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.bottomLine {
+    text-align: center;
+}
+
+.bottomLine::before {
+    content: " ";
+    vertical-align: middle;
+    border-bottom: 1px solid darkgray;
+    display: inline-block;
+    width: 45%;
+}
+
+.bottomLine::after {
+    content: "";
+    vertical-align: middle;
+    border-bottom: 1px solid darkgray;
+    display: inline-block;
+    width: 45%;
+}
+
+.related::before {
+    content: " ";
+    vertical-align: middle;
+    border-bottom: 1px solid darkgray;
+    display: inline-block;
+    width: 40%;
+}
+
+.related::after {
+    content: " ";
+    vertical-align: middle;
+    border-bottom: 1px solid darkgray;
+    display: inline-block;
+    width: 40%;
+}
+
+#readMore {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: darkgray;
+}
+
+#readMore:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+.readMore {
+    display: block;
+    text-align: center;
+}
+
+.relatedPics {
+    margin: 1px;
+    margin-right: 25px;
+    height: 120px;
+    widows: 120px;
+}
+
+.fa-2x {
+    margin-right: 35px;
+    background-color: white;
+    color: rgba(243, 195, 172, 1);
+}
+
+.myComments {
+    display: inline-block;
+    padding-left: 690px;
+    margin: 0px;
+}
+
+sideBar {
+    float: left;
+
+}
+
+sideBarLines{
+
+}
+
+
+.sideBarLines::before {
+    content: " ";
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    line-height: 18px;
+    max-width: 80px;
+    width: 40%;
+}
+
+.sideBarLines::after {
+    content: " ";
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    line-height: 18px;
+    max-width: 80px;
+    width: 40%;
+}
+.specialBox{
+    }
