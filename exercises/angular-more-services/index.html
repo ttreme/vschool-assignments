@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>More Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body ng-controller="myCtrl">
+    <div class="container ">
+        <div class="row colorMe">
+           <h1 class="col-xs-4 col-xs-offset-4 myTitle">Cartooons DUDE</h1>
+            <div class="col-xs-12">
+               <div class="row">
+                <input class="col-xs-4" ng-model="image.Url" type="text" placeholder="image url">
+                <input class="col-xs-4" ng-model="image.Title" type="text" placeholder="image title">
+                <input class="col-xs-4" ng-model="image.Description" type="text" placeholder="image description"> </div></div>
+            <div class="col-xs-12">
+               <div class="row">
+                <button class="col-xs-4 col-xs-offset-4" ng-click="addCartoon(image)">Submit</button>
+            </div></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 centerMe" ng-repeat="poop in myCartoons track by $index">
+                <div>{{poop.Title}}</div>
+                <div>{{poop.Description}}</div>
+                <div> <img ng-src="{{poop.Url}}"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="myservice.js"></script>
+</body>
+
+</html>
