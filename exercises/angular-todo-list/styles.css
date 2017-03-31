@@ -1,0 +1,37 @@
+.strike {
+    text-decoration: line-through;
+}
+
+input {
+    text-align: center;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+body {
+    background-image: url(background.jpg);
+    image-resolution:from-image;
+    
+}
+
+img {
+    border-radius: 200px;
+    height: 400px;
+    width: 300px;
+}
+
+#textColor {
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+}
+
+#myTitle {
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+}
+
+.addSpace{
+    margin-bottom: 60px;
+}

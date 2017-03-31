@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body ng-controller="myCtrl">
+    <div class="container-fluid">
+        <div class="row">
+            <form class="col-xs-offset-2 col-xs-8">
+                <div class="row">
+                    <div id="myTitle" class="col-xs-12">Your Personal To Do List</div>
+                    <input class="col-xs-6" type="text" ng-model="item.title" placeholder="Add to your List">
+                    <input class="col-xs-6" ng-model="item.description" type="text" placeholder="description">
+                    <input class="col-xs-6" ng-model="item.price" type="number" placeholder="Price">
+                    <input class="col-xs-6" ng-model="item.imgUrl" type="text" placeholder="Image Url">
+                    <button class="col-xs-4 col-xs-offset-4" ng-click="newTodo(item)" type="submit">Add Todo</button>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-xs-8 col-xs-offset-2" ng-repeat="todos in todosTwo track by $index">
+                    <div class="row">
+                        <div class="col-xs-12" ng-class="{'strike': strikeMe.completed}">
+                            <div class="row">
+                                <div class="col-xs-12" ng-hide="editing">
+                                    <button ng-click="editing = !editing">Edit Me</button>
+                                    <div id="textColor" ng-class="{'strike': todos.completed}" class="col-xs-12">What I need to do: {{todos.title}}.</div>
+                                    <div id="textColor" ng-class="{'strike': todos.completed}" class="col-xs-12">Cost: {{todos.price}}</div>
+                                    <div id="textColor" ng-class="{'strike': todos.completed}" class="col-xs-12">Description: {{todos.description}}</div>
+                                    <div ng-class="{'strike': todos.completed}" class="col-xs-12">
+                                        <input ng-model="todos.completed" type="checkbox" ng-click="edit(todos)"> <span id="textColor"> Check If Completed</span></div> <img class="col-xs-12" ng-src="{{todos.imgUrl}}"></div>
+                                <div class=col-xs-12 ng-show="editing">
+                                    <input ng-model="todos.title" placeholder="Edit Title">
+                                    <input ng-model="todos.price" placeholder="Edit price">
+                                    <input ng-model="todos.description" placeholder="Edit description">
+                                    <button ng-click="edit(todos); editing = !editing">Edit Done</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="col-xs-4 col-xs-offset-4 addSpace" ng-click="myDelete($index,item)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="main.js"></script>
+    <script src="myServices.js"></script>
+</body>
+
+</html>
