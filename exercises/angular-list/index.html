@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hit-List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body ng-controller="myCtrl">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="col-xs-12">
+      <div class="row">
+      <img class="col-xs-2" src="https://media3.giphy.com/media/KQER23aFnrfSU/200_s.gif" img-responsive>Don Corleone's Hit List</div></h1> </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row" >
+          <div class="col-xs-4"ng-repeat="kills in killList"> 
+           <img class="col-xs-4 col-xs-offset-1 hitDude" ng-src="{{kills.image}}" />
+           <div class="row">
+            <figcaption class="col-xs-8 col-xs-offset-2">{{kills.name}}</figcaption>
+        </div></div></div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="main.js"></script>
+    <script src ="myServices.js"></script>
+</body>
+
+</html>
