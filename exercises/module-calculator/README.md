@@ -1,0 +1,1 @@
+Practiced making node modules, and created a simple calculator.
