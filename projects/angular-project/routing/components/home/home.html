@@ -1,10 +1,17 @@
 <div class="row">
-    <div class="col-xs-12 exploreTitle">Explore.</div>
+    <h1 class="col-xs-12 exploreTitle">Explore Your Music</h1>
 </div>
 
-<div>
-    <input type="text" placeholder="Departure Airport">
-    <input type="text" placeholder="Arrival Airport"></div>
+<div class="row">
+    <form class="col-md-4 col-md-offset-4 col-xs-12">
+       <div class= "bubbleForm"></div>
+        <input  ng-model = "userName" type="text" placeholder="Search Artist by Name">
+        <div><button ng-click="musicName(userName)" type="submit">Submit</button></div>
+        <div class="bubbleForm"></div>
+        <div ng-repeat= "item in recentSongs track by $index">{{item.name}}
+        {{item.artist['#text']}}
+        <img ng-src ="{{item.image[1]['#text']}}">  </div>
+<!--        <div>{{recentSongs}}</div>   -->
+</form>
 
-<div> <input type="date">
-    <input type="date"></div>
+</div>
