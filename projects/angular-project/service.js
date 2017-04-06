@@ -9,16 +9,15 @@ app.service("musicService", ["$http", function ($http) {
                 return response.data.recenttracks;
             })
             .then(function (response) {
-                 return response.track;
-                
+                return response.track;
+
             })
-//            .then(function (response) {
-//                return response.name;
-//            })
 
     };
+    
+    this.topArtists = function (){
+        return $http.get("http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=fad765fbb8b4dc377d83963a1f20da7e&format=json&limit=15").then(function(response){
+            return response.data.artists.artist;
+        })        
+    }
     }])
-//Application name	I want to Punch Everything
-//API key	fad765fbb8b4dc377d83963a1f20da7e
-//Shared secret	032aef2dfd97b9e87f15140d820dfcec
-//Registered to	dubabuba

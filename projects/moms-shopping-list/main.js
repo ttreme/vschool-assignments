@@ -15,6 +15,5 @@ $(".submitButton").click(function () {
     $("ol").append($("<li class=" + "deleteList>" + newTodo + "<button class=" + "deleteMeButton> "+ "X" + "</button>" + "</li>"));
 });
 $(document).on("click", ".deleteMeButton", function() {
-    console.log("firing!")
     $(this).parent('li').remove();
 });

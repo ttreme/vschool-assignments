@@ -4,14 +4,23 @@
 
 <div class="row">
     <form class="col-md-4 col-md-offset-4 col-xs-12">
-       <div class= "bubbleForm"></div>
-        <input  ng-model = "userName" type="text" placeholder="Search Artist by Name">
+        <div class="bubbleForm"></div>
+        <input ng-model="userName" type="text" placeholder="Last Fm Username">
         <div><button ng-click="musicName(userName)" type="submit">Submit</button></div>
         <div class="bubbleForm"></div>
-        <div ng-repeat= "item in recentSongs track by $index">{{item.name}}
-        {{item.artist['#text']}}
-        <img ng-src ="{{item.image[1]['#text']}}">  </div>
-<!--        <div>{{recentSongs}}</div>   -->
-</form>
 
+
+    </form>
+</div>
+<div class="row">
+    <div class="col-xs-12" ng-repeat="item in recentSongs track by $index">
+
+
+        <li class=" col-xs-12 trackList">
+            Artist: {{item.artist['#text']}} Song: {{item.name}}</li>
+        <a href="{{item.url}}" target="_blank"><img class=" col-xs-4 col-xs-offset-4 myPhoto" ng-src="{{item.image[2]['#text']}}"></a>
+
+
+
+    </div>
 </div>

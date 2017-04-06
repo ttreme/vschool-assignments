@@ -1,0 +1,36 @@
+input {
+    margin-top: 22px;
+}
+
+button {
+    margin-top: 22px;
+}
+
+.box {
+    border: solid 1px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: aqua;
+}
+
+#describeYou {
+    padding: 40px;
+}
+
+p{
+ display:inline-block;
+    margin-top: 22px;
+    background-color: white;
+}
+#describeMe {
+    padding: 40px;
+}
+.redStuff{
+    background-color: red;
+    border: solid 1px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+
+}

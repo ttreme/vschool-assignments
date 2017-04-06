@@ -1,0 +1,1 @@
+A little practice for organizing different data types in an array

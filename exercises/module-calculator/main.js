@@ -6,9 +6,9 @@ var multiplication = require('./modules/multiplication');
 var exponents = require('./modules/exponents');
 
 var numOne = readlineSync.prompt("first number");
-console.log(numOne);
+//console.log(numOne);
 var numTwo = readlineSync.prompt("second number");
-console.log(numTwo);
+//console.log(numTwo);
 var operator = readlineSync.keyIn("+ , -, /,*, ^", {
     limit: "+-/*^"
 });
@@ -18,7 +18,7 @@ if (operator === "-") {
 } else if (operator === "+") {
     addition(numOne, numTwo);
 } else if (operator === "/") {
-    division(numOne, numTwo);
+    division.divide(numOne, numTwo);
 } else if (operator === "*") {
     multiplication(numOne, numTwo);
 } else if (operator === "^") {

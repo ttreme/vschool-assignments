@@ -1,5 +1,9 @@
-function division (numOne, numTwo){
-    console.log(parseInt(numOne / numTwo));
+function division(numOne, numTwo) {
+    this.numOne = numOne;
+    this.numTwo = numTwo;
+    this.divide = function (numOne, numTwo) {
+        console.log((parseInt(numOne / numTwo)));
+    }
 }
 
-module.exports= division;
+module.exports = new division();

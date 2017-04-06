@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Things</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body ng-controller="myCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 box">
+                <div class="row">
+                    <input class="col-xs-3 col-xs-offset-" type="text" ng-model="submission.uglyTitle" placeholder="Title">
+                    <input class="col-xs-3 col-xs-offset-1" type="text" ng-model="submission.uglyUrl" placeholder="Img Url">
+                    <input class="col-xs-3 col-xs-offset-1" type="text" ng-model="submission.uglyDescription" placeholder="Description">
+                    <div class="row">
+                        <button class="col-xs-offset-5 col-xs-1" ng-click="myPicture(submission)">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" ng-repeat="picture in photos track by $index">
+        <div class="row">
+                <button class="col-xs-offset-5 col-xs-1" ng-click="deleteMe(picture)">Delete</button>
+                <h1 class="col-xs-offset-3 col-xs-5 myTitle">{{picture.uglyTitle}}</h1>
+                <div class="col-xs-offset-3 col-xs-5 myDescription">{{picture.uglyDescription}}</div>
+                <img class="col-xs-offset-3 col-xs-5" ng-src={{picture.uglyUrl}}>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

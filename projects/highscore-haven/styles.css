@@ -1,0 +1,31 @@
+table {
+    font-family: monospace;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: blue;
+}
+tr:nth-child(odd) {
+    background-color: orangered;
+}
+
+
+
+tfoot {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    background-color: yellow;
+    border-radius: 70px;
+}

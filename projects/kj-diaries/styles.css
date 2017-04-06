@@ -140,29 +140,42 @@ sideBar {
 
 }
 
-sideBarLines{
+.sideBarLines{
+    position: absolute;
+    background-color: white;
+    bottom: 35px;
+    z-index: 1;
+    border: 1px solid white;
+    width: 100px;
+    margin-left: -50px;
+    left:50%;
 
 }
 
-
-.sideBarLines::before {
-    content: " ";
-    vertical-align: middle;
-    border-bottom: 1px solid #ddd;
-    display: inline-block;
-    line-height: 18px;
-    max-width: 80px;
-    width: 40%;
-}
-
-.sideBarLines::after {
-    content: " ";
-    vertical-align: middle;
-    border-bottom: 1px solid #ddd;
-    display: inline-block;
-    line-height: 18px;
-    max-width: 80px;
-    width: 40%;
-}
 .specialBox{
-    }
+    position:relative;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+.littleThing{
+    margin: 15px;
+}
+
+
+.sideBarLinesTwo{
+    background-color: white;
+    position: absolute;
+    bottom: 135px;
+    z-index: 1;
+    border: 1px solid white;
+    width: 100px;
+    margin-left: -50px;
+    left:50%;
+
+}
+.specialBoxTwo{
+    position:relative;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 150px;
+}

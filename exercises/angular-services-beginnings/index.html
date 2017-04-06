@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Services Beginning</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body ng-controller="myCtrl">
+   
+<h1>Add/Delete Pokemon</h1>
+<input type="text" ng-model="inputWord">
+<button ng-click="pokeAdd(inputWord)">Add Pokemon</button>
+<div ng-repeat="display in showPokemon track by $index">
+<div>{{display}}</div>
+<button ng-click="deleteMe($index, name)"> Remove Me</button>
+
+</div>
+
+
+   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>  
+<script src="app.js"></script>
+<script src="services.js"></script>
+</body>
+</html>
