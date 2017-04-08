@@ -261,60 +261,69 @@ sideBar {
     width: 500px;
 }
 
-.peachMe{
+.peachMe {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
     text-align: center;
     background-color: rgba(252, 202, 178, 0.56);
 }
-#moveMe{
+
+#moveMe {
     margin-left: -20px;
 }
-.beefMeUp{
+
+.beefMeUp {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
 }
-#centerOptions{
+
+#centerOptions {
     text-align: center;
 }
-.addPadding{
+
+.addPadding {
     padding-bottom: 35px;
 }
-.navbar-collapse{
+
+.navbar-collapse {
     text-align: center;
 }
-.spaceMe{
+
+.spaceMe {
     font-size: 15px;
     margin: 10px;
     font-family: FontAwesome;
     padding: 20px;
 }
-.spaceMeToo{
+
+.spaceMeToo {
     font-family: FontAwesome;
     font-size: 18px;
     color: black;
     font-style: italic;
-    
 }
-.dropdown-menu .spaceMe:hover{
+
+.dropdown-menu .spaceMe:hover {
     background-color: rgba(252, 202, 178, 0.56);
-    
-    
 }
+
 .fancy-input-inner:after {
     content: "\f002";
 }
-.shiftLeft{
+
+.shiftLeft {
     margin-left: -15px;
 }
-#makeCloser{
- top: -350px
+
+#makeCloser {
+    top: -350px
 }
-@media (max-width: 600px){
-    #makeCloser{
+
+@media (max-width: 600px) {
+    #makeCloser {
         top: 0px;
     }
 }
