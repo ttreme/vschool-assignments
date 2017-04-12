@@ -3,6 +3,9 @@ var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var upvoteRoute = require("./routing/upvote-route");
+var path = require("path");
+
+app.use(express.static("public"))
 
 app.use(bodyParser.json());
 mongoose.connect("mongodb://localhost/rock-vote", function(err){
