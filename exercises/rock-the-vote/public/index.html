@@ -18,21 +18,19 @@
 
             <div ng-repeat="item in upVoters track by $index">
                 <div ng-hide="edit">
-                <div>{{item.title}}</div>
-                <div>{{item.description}}</div>
-                <div>{{item.votes}}</div>
-                <button type="submit" ng-click="edit =!edit">Edit</button>
+                    <div>{{item.title}}</div>
+                    <div>{{item.description}}</div>
+                    <div>{{item.votes}}</div>
+
                 </div>
-                <div ng-show="edit" >
-                <input class="col-xs-6" type="text" ng-model="item.title" placeholder="Add to your List">
-                <input class="col-xs-6" ng-model="item.description" type="text" placeholder="description">
-                <input class="col-xs-6" ng-model="item.votes" type="number" placeholder="Votes">
-                <button ng-click="editMe(item, $index)">Save</button>
+                <div class="col-xs-6" ng-model="item.votes" type="number" placeholder="Votes"></div>
+                <button ng-click="editMe(item)" class="btn btn-primary">Upvote</button>
+                <button ng-click="downMe(item)" class="btn btn-primary">DownVote</button>
                 <button ng-click="deleteMe(item, $index)">Delete</button>
-                </div>
+
 
             </div>
-            <button ng-click="voteFunction()" class="btn btn-primary">Upvote</button>
+
         </div>
 
     </div>
@@ -40,7 +38,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="app.js"></script>
     <script src="services/counter.js"></script>
-    
+
 </body>
 
 </html>

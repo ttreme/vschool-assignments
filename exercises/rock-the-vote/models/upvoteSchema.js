@@ -4,7 +4,10 @@ var Schema = mongoose.Schema;
 var upvoteSchema = new Schema({
     title: String,
     description: String,
-    votes: 0,
+    votes:{
+        type: Number,
+        default: 0
+    },
     comments: String
 })
 var Upvote = mongoose.model("Upvote", upvoteSchema);

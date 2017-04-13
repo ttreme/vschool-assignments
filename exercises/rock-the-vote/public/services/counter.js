@@ -15,16 +15,15 @@ app.service("blueService", function ($http) {
         })
     }
 
-    this.editVote = (function(votes) {
-        console.log(votes._id);
-        return $http.put("/upvotes/" + votes._id, votes).then(function (response){
-            console.log(response);
-            return response.data;
+    this.editVote = (function (votes) {
+        return $http.put("/upvotes/" + votes._id, votes).then(function (response) {
+            var uppety = response.data.votes;
+             return uppety;
         })
     })
-    this.deleteVote = (function(votes){
-        console.log(votes._id);
-        return $http.delete("/upvotes/" + votes._id, votes).then(function(response){
+
+    this.deleteVote = (function (votes) {
+        return $http.delete("/upvotes/" + votes._id, votes).then(function (response) {
             return response.data;
         })
     })
@@ -32,6 +31,8 @@ app.service("blueService", function ($http) {
 })
 
 
+
+//cheatsheet
 //http.post('http://website.com/array', newObject)
 //http.get()
 //
@@ -39,3 +40,5 @@ app.service("blueService", function ($http) {
 //this.getFunction = function(){
 //    return http.get('')
 //}
+
+//                <button type="submit" ng-click="edit =!edit">Edit</button>
