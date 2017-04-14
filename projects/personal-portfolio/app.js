@@ -1,5 +1,12 @@
 var app = angular.module("myApp", []);
 
-app.controller("myCtrl", ["$scope", function($scope){
-    $scope.test="hey";
-}])
+app.controller("myCtrl", ["$scope", function ($scope) {
+    $scope.test = "hey";
+        $(document).ready(function(){
+	$('#nav-icon4').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+}]);
+
+

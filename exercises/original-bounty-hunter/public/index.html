@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Bounty Hunter</title>
+</head>
+<body ng-controller="bounties">
+<div ng-repeat="bounty in bounties">
+    <h1>{{bounty.fName}}</h1>
+    <h1>{{bounty.lName}}</h1>
+    <h1>{{bounty.cost | currency:"$"}}</h1>
+    
+</div>    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="/server.js"></script>
+    <script src="app.js"></script>
+    <script src="bounties.js"></script>
+</body>
+</html>

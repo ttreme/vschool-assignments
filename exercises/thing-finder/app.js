@@ -30,7 +30,7 @@ app.get("/fruit", function (req, res) {
         
         var haveFoundExactMatch = true;
         
-        for (var key in fruit[i]){
+        for (var key in req.query){
            if (req.query[key] != fruit[i][key]){
                haveFoundExactMatch = false;
            } 

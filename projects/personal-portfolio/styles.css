@@ -1,0 +1,147 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+body{
+    background-image: url(alpaca-1672647.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    
+}
+.angleOn {
+    background-color: black;
+    position: absolute;
+    width: 160px;
+    height: 300px;
+    transition: all 0.8s ease;
+    transform: matrix3d(3, 0, 0, 0, -1, 3, 0, 0, 0, 0, 1, 0, 49, 100, 0, 1);
+    transform-origin: 50px 50px 0px;
+}
+
+.angleOff {
+    background-color: black;
+    position: absolute;
+    transform: none;
+    width: 160px;
+    height: 300px;
+    transition: all 0.8s ease-out;
+    transform: matrix3d(3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 1, 0, -600, 100, 0, 1);
+    transform-origin: 50px 50px 0px;
+}
+
+.itemsBox {
+    transform: matrix(1, 0, 0.33, 1, 20, 40);
+    position: relative;
+}
+
+a {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+
+/*animations*/
+
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+div.container {
+    font-family: Raleway;
+    margin-left: -30px;
+    ;
+}
+
+div.container a {
+    text-decoration: none;
+    font: 20px Raleway;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    color: white;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+}
+
+div.highlightTextOut a {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+div.highlightTextOut a:before,
+div.highlightTextIn a:before {
+    position: absolute;
+    color: #FFF;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.2s;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+div.highlightTextOut a:hover:before,
+div.highlightTextIn a:hover:before {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/*hamburger*/
+
+#nav-icon4 {
+    right: 46%;
+}
+
+#nav-icon4 {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 50px auto;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: white;
+    box-shadow: 1px 1px 1px;
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .8s ease-in-out;
+}
+
+#nav-icon4 span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+    top: 10px;
+    transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+    top: 20px;
+    transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: -14px;
+    left: 11px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 5px;
+    left: 10px;
+}

@@ -1,9 +1,19 @@
-
 var express = require('express');
 var bountyRouter = express.Router();
 var idMan = require('uuid/v4');
 
-var bounties = [];
+var bounties = [{
+        fName: "jason",
+        lName: "lee",
+        cost: 1000000,
+        id: "a1234"
+}, {
+        fName: "aaron",
+        lName: "Ellis",
+        cost: 10,
+        id: "b567"
+    }
+               ];
 
 bountyRouter.route('/')
     .get(function (req, res) {
@@ -41,4 +51,3 @@ bountyRouter.route('/:_id')
     });
 
 module.exports = bountyRouter;
-
