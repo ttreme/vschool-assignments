@@ -6,12 +6,14 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+
+
 </head>
 
-<body ng-controller="myCtrl">
+<body class="container-fluid" ng-controller="myCtrl">
 <div class="row"></div>
 <my-nav></my-nav>
-
+<ng-view></ng-view>
 
 
 
@@ -22,6 +24,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="app.js"></script>
     <script src="directives/navbar.js"></script>
+    <script src="routing/components/about/about.js"></script>
+    <script src="routing/components/contact/contact.js"></script>
+    <script src="routing/components/home/home.js"></script>
+    <script src="routing/components/projects/projects.js"></script>
+
 </body>
 
 </html>
