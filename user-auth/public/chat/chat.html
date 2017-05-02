@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-4 col-xs-offset-4 centerLogin">
+        <h3>Chat Room</h3>
+
+    <input ng-model="newMessage" type="text"> <button ng-click="sendMessage()">send</button>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+        <ul>
+            <li ng-repeat="message in messages track by $index">
+                <span>{{message.message}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
