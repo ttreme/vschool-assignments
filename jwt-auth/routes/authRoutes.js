@@ -7,7 +7,6 @@ var config = require("../config");
 
 authRoutes.post("/login", function (req, res) {
 
-    // Try to find the user with the submitted username
     User.findOne({username: req.body.username}, function (err, user) {
         if (err) res.status(500).send(err);
         if (!user) {
