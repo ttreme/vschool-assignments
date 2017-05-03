@@ -1,0 +1,22 @@
+.chatTitle{
+    text-align: center;
+}
+.chatBackground{
+    background-color: black;
+}
+li{
+    border-radius: 20px;
+    font-size: 25px;
+    font-family: "Arial Hebrew Scholar";
+    list-style: none;
+    padding: 5px;
+}
+li:nth-child(odd) {
+    background-color:mintcream;
+    color: black;
+
+}
+li:nth-child(even){
+    color:whitesmoke;
+    background-color: indianred;
+}
