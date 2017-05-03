@@ -10,6 +10,6 @@ app.config(function ($routeProvider) {
             controller: "TodoController"
         })
         .otherwise ({
-            redirectTo: "/todos"
+            redirectTo: "/"
         })
 });

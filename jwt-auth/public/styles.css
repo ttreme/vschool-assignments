@@ -1,9 +1,41 @@
+body{
+    background-image: url("frown.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .chatTitle{
     text-align: center;
 }
+.argueThis{
+    color: white;
+    font-family: Athelas;
+}
+.argueMe{
+    color: crimson;
+}
 .chatBackground{
     background-color: black;
+    overflow: scroll;
+    height: 60vh;
+    padding: 10px;
+    border: solid 20px black;
 }
+.theUsername{
+    color: black;
+}
+.chatAnger{
+    color: crimson;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.chatAngerTwo{
+    color: crimson;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
 li{
     border-radius: 20px;
     font-size: 25px;
@@ -19,4 +51,16 @@ li:nth-child(odd) {
 li:nth-child(even){
     color:whitesmoke;
     background-color: indianred;
+}
+.first:first-of-type{
+    color:pink;
+}
+
+.theMessage{
+    background-color: grey;
+    padding: 40px;
+}
+.powerButton{
+    height: 27px;
+    background-color: pink;
 }

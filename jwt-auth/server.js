@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use("/api", expressJwt({secret: config.secret}));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/api/todo", require("./routes/todoRoutes"));
+app.use("/api/user", require("./routes/userRoutes"));
 
 
 io.on('connection', function(socket){

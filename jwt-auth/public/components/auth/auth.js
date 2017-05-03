@@ -32,7 +32,18 @@ app.service("TokenService", [function () {
     };
 }]);
 
+
+
 app.service("UserService", ["$http", "$location", "TokenService", function ($http, $location, TokenService) {
+    var self = this;
+    this.currentUser = '';
+    this.userIn = function(){
+        return $http.get("/api/user").then(function(response){
+            console.log(response);
+            self.currentUser = response.data.user;
+        });
+    }
+
     this.signup = function (user) {
         return $http.post("/auth/signup", user);
     };
@@ -40,7 +51,6 @@ app.service("UserService", ["$http", "$location", "TokenService", function ($htt
     this.login = function (user) {
         return $http.post("/auth/login", user).then(function (response) {
             TokenService.setToken(response.data.token);
-            console.log(response.data);
             return response;
         });
     };

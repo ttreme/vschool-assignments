@@ -10,7 +10,7 @@ var todoSchema = new Schema({
         type: Boolean,
         default: false
     },
-    // Add a reference to the user to whom this todo belongs
+
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",

@@ -25,6 +25,7 @@ authRoutes.post("/login", function (req, res) {
     });
 });
 
+
 authRoutes.post("/signup", function (req, res) {
     User.find({username: req.body.username}, function (err, existingUser) {
         if (err) return res.status(500).send(err);
