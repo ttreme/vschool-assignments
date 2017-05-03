@@ -5,10 +5,6 @@ app.config(function ($routeProvider) {
             templateUrl: "components/home/home.html",
             controller: "homeController"
         })
-        .when("/todos", {
-            templateUrl: "components/todos/todos.html",
-            controller: "TodoController"
-        })
         .otherwise ({
             redirectTo: "/"
         })

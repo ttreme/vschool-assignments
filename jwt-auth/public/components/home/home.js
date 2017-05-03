@@ -7,10 +7,6 @@ app.controller("homeController", ['$rootScope','$scope', 'UserService', "$locati
     $scope.messages = [];
     $scope.lastOne = "";
 
-
-
-
-
     socket.emit("test", "we are passing in a message");
     socket.on("receive-message", function(msg){
         $scope.$apply(function(){

@@ -17,9 +17,9 @@
 
             <ul class="nav navbar-nav navbar-right">
 
-                <li><a href="#/signup">Signup</a></li>
-                <li><a href="#/login">Login</a></li>
-                <li><a href="#/logout">Logout</a></li>
+                <li ng-hide="userService.isAuthenticated()"><a href="#/signup">Signup</a></li>
+                <li ng-hide="userService.isAuthenticated()"><a href="#/login">Login</a></li>
+                <li ng-show="userService.isAuthenticated()"><a href="#/logout">Logout</a></li>
 
             </ul>
         </div>
